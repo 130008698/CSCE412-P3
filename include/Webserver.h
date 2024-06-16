@@ -5,15 +5,13 @@
 
 class Webserver
 {
-private:
+public:
     bool is_busy;
     int remaining_time;
-
-public:
     Webserver();
     void processRequest(Request req);
-    bool isAvailible();
-    void tick();
+    bool isAvailable();
+    void cycle();
 };
 
 #endif

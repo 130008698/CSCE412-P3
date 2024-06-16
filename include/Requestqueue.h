@@ -16,6 +16,7 @@ public:
     Request getNextRequest();
     bool isEmpty();
     size_t size();
+    std::queue<Request> getQueue() const;
 };
 
 #endif
