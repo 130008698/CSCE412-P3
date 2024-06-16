@@ -14,6 +14,6 @@ public:
     void processRequest(Request req);
     bool isAvailible();
     void tick();
-}
+};
 
 #endif

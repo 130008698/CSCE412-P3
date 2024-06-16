@@ -16,6 +16,6 @@ public:
     Request getNextRequest();
     bool isEmpty();
     size_t size();
-}
+};
 
 #endif

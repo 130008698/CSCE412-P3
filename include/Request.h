@@ -12,6 +12,6 @@ struct Request
     int time;
 
     Request(string in, string out, int time);
-}
+};
 
 #endif
