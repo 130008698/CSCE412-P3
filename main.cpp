@@ -1,3 +1,8 @@
+/**
+ * @file main.cpp
+ * @brief Main program for running the load balancer simulation.
+ */
+
 #include <iostream>
 #include "Loadbalancer.h"
 #include "Helpers.h"

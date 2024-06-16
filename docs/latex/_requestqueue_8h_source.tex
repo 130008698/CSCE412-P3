@@ -1,0 +1,33 @@
+\doxysection{Requestqueue.\+h}
+\hypertarget{_requestqueue_8h_source}{}\label{_requestqueue_8h_source}\index{include/Requestqueue.h@{include/Requestqueue.h}}
+\mbox{\hyperlink{_requestqueue_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ REQUESTQUEUE\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ REQUESTQUEUE\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_request_8h}{Request.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_requestqueue}{Requestqueue}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00020\ \ \ \ \ queue<Request>\ queue;\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_requestqueue_a2359a2807e99ffc6594295b56bfb3980}{addRequest}}(\mbox{\hyperlink{struct_request}{Request}}\ req);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{struct_request}{Request}}\ \mbox{\hyperlink{class_requestqueue_a4c836cc2be71df73fb60585ebb2922b7}{getNextRequest}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_requestqueue_a1e81c51d7bab425bc8544b8bbf0f8c6a}{isEmpty}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{class_requestqueue_a6c7801b1ed0f47d8051a293cfc34b967}{size}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \ \ \ \ std::queue<Request>\ \mbox{\hyperlink{class_requestqueue_aab2efe12a0aafe27b61ffd20854bca94}{getQueue}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ REQUESTQUEUE\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,91 @@
+\doxysection{Loadbalancer Class Reference}
+\hypertarget{class_loadbalancer}{}\label{class_loadbalancer}\index{Loadbalancer@{Loadbalancer}}
+
+
+Class representing a load balancer.  
+
+
+
+
+{\ttfamily \#include $<$Loadbalancer.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_loadbalancer_a2c5e3a45ee90aa565629a3580f848d7c}{initialize\+Servers}} (int num)
+\begin{DoxyCompactList}\small\item\em Initializes the web servers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_loadbalancer_ac61a9da4735761e55807c934264e94ec}{add\+Request}} (\mbox{\hyperlink{struct_request}{Request}} req)
+\begin{DoxyCompactList}\small\item\em Adds a request to the request queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_loadbalancer_aa55242a379c3e0cbb1ec66e79410e2a5}{balance\+Load}} ()
+\begin{DoxyCompactList}\small\item\em Balances the load by assigning requests to available servers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_loadbalancer_a90c7acad5b81be3aa7030f62a265c274}{run}} (int total\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Runs the load balancer simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a load balancer. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_loadbalancer_ac61a9da4735761e55807c934264e94ec}\index{Loadbalancer@{Loadbalancer}!addRequest@{addRequest}}
+\index{addRequest@{addRequest}!Loadbalancer@{Loadbalancer}}
+\doxysubsubsection{\texorpdfstring{addRequest()}{addRequest()}}
+{\footnotesize\ttfamily \label{class_loadbalancer_ac61a9da4735761e55807c934264e94ec} 
+void Loadbalancer\+::add\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_request}{Request}}}]{req}{}\end{DoxyParamCaption})}
+
+
+
+Adds a request to the request queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & The request to add \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_loadbalancer_aa55242a379c3e0cbb1ec66e79410e2a5}\index{Loadbalancer@{Loadbalancer}!balanceLoad@{balanceLoad}}
+\index{balanceLoad@{balanceLoad}!Loadbalancer@{Loadbalancer}}
+\doxysubsubsection{\texorpdfstring{balanceLoad()}{balanceLoad()}}
+{\footnotesize\ttfamily \label{class_loadbalancer_aa55242a379c3e0cbb1ec66e79410e2a5} 
+void Loadbalancer\+::balance\+Load (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Balances the load by assigning requests to available servers. 
+
+\Hypertarget{class_loadbalancer_a2c5e3a45ee90aa565629a3580f848d7c}\index{Loadbalancer@{Loadbalancer}!initializeServers@{initializeServers}}
+\index{initializeServers@{initializeServers}!Loadbalancer@{Loadbalancer}}
+\doxysubsubsection{\texorpdfstring{initializeServers()}{initializeServers()}}
+{\footnotesize\ttfamily \label{class_loadbalancer_a2c5e3a45ee90aa565629a3580f848d7c} 
+void Loadbalancer\+::initialize\+Servers (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+servers}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the web servers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num} & Number of web servers to initialize\\
+\hline
+{\em num\+\_\+servers} & Number of web servers to initialize \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_loadbalancer_a90c7acad5b81be3aa7030f62a265c274}\index{Loadbalancer@{Loadbalancer}!run@{run}}
+\index{run@{run}!Loadbalancer@{Loadbalancer}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \label{class_loadbalancer_a90c7acad5b81be3aa7030f62a265c274} 
+void Loadbalancer\+::run (\begin{DoxyParamCaption}\item[{int}]{total\+\_\+time}{}\end{DoxyParamCaption})}
+
+
+
+Runs the load balancer simulation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em total\+\_\+time} & Total time to run the simulation \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_loadbalancer_8h}{Loadbalancer.\+h}}\item 
+src/\mbox{\hyperlink{_loadbalancer_8cpp}{Loadbalancer.\+cpp}}\end{DoxyCompactItemize}

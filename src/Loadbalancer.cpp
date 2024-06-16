@@ -1,7 +1,16 @@
+/**
+ * @file Loadbalancer.cpp
+ * @brief Implements the Loadbalancer class for the load balancer simulation.
+ */
+
 #include <fstream>
 #include "Loadbalancer.h"
 #include "Helpers.h"
 
+/**
+ * @brief Initializes the web servers.
+ * @param num_servers Number of web servers to initialize
+ */
 void Loadbalancer::initializeServers(int num_servers)
 {
     for (int i = 0; i < num_servers; i++)
@@ -10,11 +19,18 @@ void Loadbalancer::initializeServers(int num_servers)
     }
 }
 
+/**
+ * @brief Adds a request to the request queue.
+ * @param req The request to add
+ */
 void Loadbalancer::addRequest(Request req)
 {
     requestQueue.addRequest(req);
 }
 
+/**
+ * @brief Balances the load by assigning requests to available servers.
+ */
 void Loadbalancer::balanceLoad()
 {
     for (auto &server : servers)
@@ -26,6 +42,10 @@ void Loadbalancer::balanceLoad()
     }
 }
 
+/**
+ * @brief Runs the load balancer simulation.
+ * @param total_time Total time to run the simulation
+ */
 void Loadbalancer::run(int total_time)
 {
     this->total_time = total_time;
@@ -51,6 +71,10 @@ void Loadbalancer::run(int total_time)
     }
 }
 
+/**
+ * @brief Logs the status of the load balancer at a given cycle.
+ * @param cycle The current cycle
+ */
 void Loadbalancer::logStatus(int cycle)
 {
     std::ofstream log_file("load_balancer_log.txt", std::ios_base::app);

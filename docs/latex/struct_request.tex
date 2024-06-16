@@ -1,0 +1,89 @@
+\doxysection{Request Struct Reference}
+\hypertarget{struct_request}{}\label{struct_request}\index{Request@{Request}}
+
+
+Structure representing a request in the load balancer.  
+
+
+
+
+{\ttfamily \#include $<$Request.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_request_a40eb324aa7368e1ba2c7ddcc5c8b149f}{Request}} (string \mbox{\hyperlink{struct_request_ab682dddf4e7b8dfd3863c1655f49f5ca}{in}}, string \mbox{\hyperlink{struct_request_ab217332721f669fe30c66e0861ea73ef}{out}}, int \mbox{\hyperlink{struct_request_a3cfb576ed0b5e08612f3de8bc7cd72e2}{time}})
+\begin{DoxyCompactList}\small\item\em Constructor to initialize a \doxylink{struct_request}{Request} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{struct_request_ab682dddf4e7b8dfd3863c1655f49f5ca}{in}}
+\begin{DoxyCompactList}\small\item\em IP address of the requester. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{struct_request_ab217332721f669fe30c66e0861ea73ef}{out}}
+\begin{DoxyCompactList}\small\item\em IP address of the responder. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_request_a3cfb576ed0b5e08612f3de8bc7cd72e2}{time}}
+\begin{DoxyCompactList}\small\item\em Time required to process the request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure representing a request in the load balancer. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_request_a40eb324aa7368e1ba2c7ddcc5c8b149f}\index{Request@{Request}!Request@{Request}}
+\index{Request@{Request}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{Request()}{Request()}}
+{\footnotesize\ttfamily \label{struct_request_a40eb324aa7368e1ba2c7ddcc5c8b149f} 
+Request\+::\+Request (\begin{DoxyParamCaption}\item[{string}]{in}{, }\item[{string}]{out}{, }\item[{int}]{time}{}\end{DoxyParamCaption})}
+
+
+
+Constructor to initialize a \doxylink{struct_request}{Request} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & IP address of the requester \\
+\hline
+{\em out} & IP address of the responder \\
+\hline
+{\em time} & Time required to process the request \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_request_ab682dddf4e7b8dfd3863c1655f49f5ca}\index{Request@{Request}!in@{in}}
+\index{in@{in}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{in}{in}}
+{\footnotesize\ttfamily \label{struct_request_ab682dddf4e7b8dfd3863c1655f49f5ca} 
+string Request\+::in}
+
+
+
+IP address of the requester. 
+
+\Hypertarget{struct_request_ab217332721f669fe30c66e0861ea73ef}\index{Request@{Request}!out@{out}}
+\index{out@{out}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{out}{out}}
+{\footnotesize\ttfamily \label{struct_request_ab217332721f669fe30c66e0861ea73ef} 
+string Request\+::out}
+
+
+
+IP address of the responder. 
+
+\Hypertarget{struct_request_a3cfb576ed0b5e08612f3de8bc7cd72e2}\index{Request@{Request}!time@{time}}
+\index{time@{time}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily \label{struct_request_a3cfb576ed0b5e08612f3de8bc7cd72e2} 
+int Request\+::time}
+
+
+
+Time required to process the request. 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_request_8h}{Request.\+h}}\item 
+src/\mbox{\hyperlink{_request_8cpp}{Request.\+cpp}}\end{DoxyCompactItemize}

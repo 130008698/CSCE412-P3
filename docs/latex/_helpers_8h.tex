@@ -1,0 +1,54 @@
+\doxysection{include/\+Helpers.h File Reference}
+\hypertarget{_helpers_8h}{}\label{_helpers_8h}\index{include/Helpers.h@{include/Helpers.h}}
+
+
+Helper functions for generating random IP addresses and requests.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include "{}Request.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{_helpers_8h_a133d95d8fe423773e76444cff3cd9116}{random\+IP}} ()
+\begin{DoxyCompactList}\small\item\em Generates a random IP address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_request}{Request}} \mbox{\hyperlink{_helpers_8h_ac2e8e96dff96920753134ff303676137}{random\+Req}} ()
+\begin{DoxyCompactList}\small\item\em Generates a random request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helper functions for generating random IP addresses and requests. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_helpers_8h_a133d95d8fe423773e76444cff3cd9116}\index{Helpers.h@{Helpers.h}!randomIP@{randomIP}}
+\index{randomIP@{randomIP}!Helpers.h@{Helpers.h}}
+\doxysubsubsection{\texorpdfstring{randomIP()}{randomIP()}}
+{\footnotesize\ttfamily \label{_helpers_8h_a133d95d8fe423773e76444cff3cd9116} 
+string random\+IP (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Generates a random IP address. 
+
+\begin{DoxyReturn}{Returns}
+A string representing a random IP address.
+
+A string representing a random IP address 
+\end{DoxyReturn}
+\Hypertarget{_helpers_8h_ac2e8e96dff96920753134ff303676137}\index{Helpers.h@{Helpers.h}!randomReq@{randomReq}}
+\index{randomReq@{randomReq}!Helpers.h@{Helpers.h}}
+\doxysubsubsection{\texorpdfstring{randomReq()}{randomReq()}}
+{\footnotesize\ttfamily \label{_helpers_8h_ac2e8e96dff96920753134ff303676137} 
+\mbox{\hyperlink{struct_request}{Request}} random\+Req (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Generates a random request. 
+
+\begin{DoxyReturn}{Returns}
+A \doxylink{struct_request}{Request} object with random IP addresses and processing time.
+
+A \doxylink{struct_request}{Request} object with random IP addresses and processing time 
+\end{DoxyReturn}

@@ -1,0 +1,105 @@
+\doxysection{Requestqueue Class Reference}
+\hypertarget{class_requestqueue}{}\label{class_requestqueue}\index{Requestqueue@{Requestqueue}}
+
+
+Class representing a queue of requests.  
+
+
+
+
+{\ttfamily \#include $<$Requestqueue.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_requestqueue_a2359a2807e99ffc6594295b56bfb3980}{add\+Request}} (\mbox{\hyperlink{struct_request}{Request}} req)
+\begin{DoxyCompactList}\small\item\em Adds a request to the queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_request}{Request}} \mbox{\hyperlink{class_requestqueue_a4c836cc2be71df73fb60585ebb2922b7}{get\+Next\+Request}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the next request from the queue. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_requestqueue_a1e81c51d7bab425bc8544b8bbf0f8c6a}{is\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the queue is empty. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_requestqueue_a6c7801b1ed0f47d8051a293cfc34b967}{size}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current size of the queue. \end{DoxyCompactList}\item 
+std\+::queue$<$ \mbox{\hyperlink{struct_request}{Request}} $>$ \mbox{\hyperlink{class_requestqueue_aab2efe12a0aafe27b61ffd20854bca94}{get\+Queue}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a queue of requests. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_requestqueue_a2359a2807e99ffc6594295b56bfb3980}\index{Requestqueue@{Requestqueue}!addRequest@{addRequest}}
+\index{addRequest@{addRequest}!Requestqueue@{Requestqueue}}
+\doxysubsubsection{\texorpdfstring{addRequest()}{addRequest()}}
+{\footnotesize\ttfamily \label{class_requestqueue_a2359a2807e99ffc6594295b56bfb3980} 
+void Requestqueue\+::add\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_request}{Request}}}]{req}{}\end{DoxyParamCaption})}
+
+
+
+Adds a request to the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & The request to add \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_requestqueue_a4c836cc2be71df73fb60585ebb2922b7}\index{Requestqueue@{Requestqueue}!getNextRequest@{getNextRequest}}
+\index{getNextRequest@{getNextRequest}!Requestqueue@{Requestqueue}}
+\doxysubsubsection{\texorpdfstring{getNextRequest()}{getNextRequest()}}
+{\footnotesize\ttfamily \label{class_requestqueue_a4c836cc2be71df73fb60585ebb2922b7} 
+\mbox{\hyperlink{struct_request}{Request}} Requestqueue\+::get\+Next\+Request (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the next request from the queue. 
+
+\begin{DoxyReturn}{Returns}
+The next request 
+\end{DoxyReturn}
+\Hypertarget{class_requestqueue_aab2efe12a0aafe27b61ffd20854bca94}\index{Requestqueue@{Requestqueue}!getQueue@{getQueue}}
+\index{getQueue@{getQueue}!Requestqueue@{Requestqueue}}
+\doxysubsubsection{\texorpdfstring{getQueue()}{getQueue()}}
+{\footnotesize\ttfamily \label{class_requestqueue_aab2efe12a0aafe27b61ffd20854bca94} 
+queue$<$ \mbox{\hyperlink{struct_request}{Request}} $>$ Requestqueue\+::get\+Queue (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns the current queue. 
+
+\begin{DoxyReturn}{Returns}
+A copy of the current queue.
+
+A copy of the current queue 
+\end{DoxyReturn}
+\Hypertarget{class_requestqueue_a1e81c51d7bab425bc8544b8bbf0f8c6a}\index{Requestqueue@{Requestqueue}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Requestqueue@{Requestqueue}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily \label{class_requestqueue_a1e81c51d7bab425bc8544b8bbf0f8c6a} 
+bool Requestqueue\+::is\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the queue is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if the queue is empty, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_requestqueue_a6c7801b1ed0f47d8051a293cfc34b967}\index{Requestqueue@{Requestqueue}!size@{size}}
+\index{size@{size}!Requestqueue@{Requestqueue}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \label{class_requestqueue_a6c7801b1ed0f47d8051a293cfc34b967} 
+size\+\_\+t Requestqueue\+::size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns the current size of the queue. 
+
+\begin{DoxyReturn}{Returns}
+The size of the queue 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_requestqueue_8h}{Requestqueue.\+h}}\item 
+src/\mbox{\hyperlink{_requestqueue_8cpp}{Requestqueue.\+cpp}}\end{DoxyCompactItemize}
