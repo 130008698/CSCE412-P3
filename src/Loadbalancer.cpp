@@ -43,12 +43,41 @@ void Loadbalancer::balanceLoad()
 }
 
 /**
+ * @brief Dynamically adjusts the number of web servers based on the queue size.
+ */
+int Loadbalancer::adjustServers()
+{
+    int result = 0;
+    if (requestQueue.size() > servers.size() * 10)
+    {
+        // Add a new server if the queue size exceeds the upper threshold
+        servers.push_back(Webserver());
+        result = 1;
+    }
+    else if (requestQueue.size() < servers.size() && servers.size() > 1)
+    {
+        // Remove an idle server if the queue size falls below the lower threshold
+        for (auto it = servers.begin(); it != servers.end(); ++it)
+        {
+            if (it->isAvailable())
+            {
+                servers.erase(it);
+                break;
+            }
+        }
+        result = 2;
+    }
+    return result;
+}
+
+/**
  * @brief Runs the load balancer simulation.
  * @param total_time Total time to run the simulation
  */
 void Loadbalancer::run(int total_time)
 {
     this->total_time = total_time;
+    int result = 0;
     for (int cycle = 0; cycle < total_time; cycle++)
     {
         // Add random new requests at random times
@@ -57,6 +86,11 @@ void Loadbalancer::run(int total_time)
             addRequest(randomReq());
         }
 
+        // Adjust the number of servers based on the queue size
+        if (cycle != 0)
+        {
+            result = adjustServers();
+        }
         // Process existing requests
         balanceLoad();
 
@@ -67,7 +101,7 @@ void Loadbalancer::run(int total_time)
         }
 
         // Log status
-        logStatus(cycle);
+        logStatus(cycle, result);
     }
 }
 
@@ -75,7 +109,7 @@ void Loadbalancer::run(int total_time)
  * @brief Logs the status of the load balancer at a given cycle.
  * @param cycle The current cycle
  */
-void Loadbalancer::logStatus(int cycle)
+void Loadbalancer::logStatus(int cycle, int result)
 {
     std::ofstream log_file("load_balancer_log.txt", std::ios_base::app);
 
@@ -85,7 +119,14 @@ void Loadbalancer::logStatus(int cycle)
         log_file << "Starting queue size: " << servers.size() * 1000 << "\n";
     }
     log_file << "Cycle: " << cycle << "\n";
-
+    if (result == 1)
+    {
+        log_file << "A new Webserver has been allocated " << "\n";
+    }
+    else if (result == 2)
+    {
+        log_file << "An idle Webserver has been deallocated " << "\n";
+    }
     // Log server statuses
     for (size_t i = 0; i < servers.size(); i++)
     {

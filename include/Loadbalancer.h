@@ -25,8 +25,14 @@ private:
     /**
      * @brief Logs the status of the load balancer at a given cycle.
      * @param cycle The current cycle
+     * @param result The current cycle's adjust server status
      */
-    void logStatus(int cycle);
+    void logStatus(int cycle, int result);
+
+    /**
+     * @brief Dynamically adjusts the number of web servers based on the queue size.
+     */
+    int adjustServers();
 
 public:
     /**
