@@ -116,7 +116,7 @@ void Loadbalancer::logStatus(int cycle, int result)
     if (cycle == 0)
     {
         log_file << "Range for task times: min = 1, max = 10 " << "\n";
-        log_file << "Starting queue size: " << servers.size() * 1000 << "\n";
+        log_file << "Starting queue size: " << servers.size() * 100 << "\n";
     }
     log_file << "Cycle: " << cycle << "\n";
     if (result == 1)
