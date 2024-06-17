@@ -79,6 +79,11 @@ void Loadbalancer::logStatus(int cycle)
 {
     std::ofstream log_file("load_balancer_log.txt", std::ios_base::app);
 
+    if (cycle == 0)
+    {
+        log_file << "Range for task times: min = 1, max = 10 " << "\n";
+        log_file << "Starting queue size: " << servers.size() * 1000 << "\n";
+    }
     log_file << "Cycle: " << cycle << "\n";
 
     // Log server statuses
@@ -98,6 +103,11 @@ void Loadbalancer::logStatus(int cycle)
         Request req = tempQueue.front();
         log_file << "  Request - IP In: " << req.in << ", IP Out: " << req.out << ", Time: " << req.time << "\n";
         tempQueue.pop();
+    }
+
+    if (cycle == total_time)
+    {
+        log_file << "Ending queue size: " << requestQueue.size() << "\n";
     }
 
     log_file << "\n";
