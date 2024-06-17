@@ -105,7 +105,7 @@ void Loadbalancer::logStatus(int cycle)
         tempQueue.pop();
     }
 
-    if (cycle == total_time)
+    if (cycle == total_time - 1)
     {
         log_file << "Ending queue size: " << requestQueue.size() << "\n";
     }
